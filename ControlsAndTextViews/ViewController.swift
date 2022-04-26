@@ -90,7 +90,7 @@ class ViewController: UIViewController {
         
         // Labels
         
-        myStepperLabel.textColor = .darkGray
+        myStepperLabel.textColor = .darkGray//Le estamos añadiendo color al Stepper
         myStepperLabel.font = UIFont.boldSystemFont(ofSize: 36)
         myStepperLabel.text = "1"
         
