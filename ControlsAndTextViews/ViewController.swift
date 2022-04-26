@@ -1,9 +1,6 @@
-//
-//  ViewController.swift
-//  ControlsAndTextViews
-//
-//  Created by Brais Moure on 22/11/2019.
-//  Copyright © 2019 MoureDev. All rights reserved.
+
+//  Created by Mikel Valle on 26/04/2022.
+//  Copyright © 2022 MiikeLike. All rights reserved.
 //
 
 import UIKit
