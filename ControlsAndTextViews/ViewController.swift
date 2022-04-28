@@ -38,7 +38,7 @@ class ViewController: UIViewController {
         
         // Pickers
         
-        myPickerView.backgroundColor = .lightGray
+        myPickerView.backgroundColor = .gray
         myPickerView.dataSource = self
         myPickerView.delegate = self
         myPickerView.isHidden = true //Con este codigo dejamos por defecto apagado el pickerView++
@@ -72,7 +72,7 @@ class ViewController: UIViewController {
         
         //ESTAMOS ACCEDIENDO A SUS PROPIEDADES
         
-        mySwitch.onTintColor = .purple //Le cambiamos el color
+        mySwitch.onTintColor = .blue //Le cambiamos el color
         mySwitch.isOn = false//Con este codigo le estamos diciendo que por defecto este apagado
         
         // Progress Indicators
