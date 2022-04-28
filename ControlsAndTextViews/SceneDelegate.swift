@@ -1,10 +1,4 @@
-//
-//  SceneDelegate.swift
-//  ControlsAndTextViews
-//
-//  Created by Brais Moure on 22/11/2019.
-//  Copyright © 2019 MoureDev. All rights reserved.
-//
+
 
 import UIKit
 
