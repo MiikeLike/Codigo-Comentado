@@ -20,8 +20,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var myActivityIndicatior: UIActivityIndicatorView!//Es la rueda de carga
     @IBOutlet weak var myStepperLabel: UILabel!//Son etiquetas sobre el Stepper
     @IBOutlet weak var mySwitchLabel: UILabel!//
-    @IBOutlet weak var myTextField: UITextField!
-    @IBOutlet weak var myTextView: UITextView!
+    @IBOutlet weak var myTextField: UITextField!//Añadimos una etiqueta de texto
+    @IBOutlet weak var myTextView: UITextView!//Diferencia entre el textField y el textView es que en el primero solo tenemos una linea de text y en el textView tenemos infinitas lineas
     
     // Variables
     
@@ -95,9 +95,9 @@ class ViewController: UIViewController {
         
         // TextFields
         
-        myTextField.textColor = .brown
-        myTextField.placeholder = "Escribe algo"
-        myTextField.delegate = self
+        myTextField.textColor = .brown//Modificamos nuestro color de la etiqueta
+        myTextField.placeholder = "Escribe algo"//Texto que da indicaciones al usuario y le sirve de ayuda Pero en el momento que se escribe algo aparecera el texto del color del codigo anterior
+        myTextField.delegate = self//Estamos haciendo que nuestro codigo TextField se comunique con nuestro codigo, importante crear una extensión del ViewControler
         
         // TextViews
         
@@ -215,16 +215,16 @@ extension ViewController: UIPickerViewDataSource, UIPickerViewDelegate {
     }
     
 }
-
+//ESTE CODIGO SE IMPLEMENTA PARA LA FUNCIÓN DEL TEXTFIELD, ESTE CODIGO SE COMUNICA CON myTextView.delegate = self
 // UITextFieldDelegate
 extension ViewController: UITextFieldDelegate {
-    
+    //Función return del teclado para que cierre el mismo, lo que es lo mismo decir que cuando pulsamos ENTER se cierre el teclado.
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
     }
-    
+    //En el momento que finalizamos el text hacemos que nuestro text se muestre en el botón
     func textFieldDidEndEditing(_ textField: UITextField) {
-        myButton.setTitle(myTextField.text, for: .normal)
+        myButton.setTitle(myTextField.text, for: .normal)//Estamos llamando a nuestro botón y le añadimos el text
     }
     
 }
@@ -241,4 +241,4 @@ extension ViewController: UITextViewDelegate {
     }
     
 }
-//sdfjlkj
+
