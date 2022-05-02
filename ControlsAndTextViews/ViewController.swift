@@ -38,7 +38,7 @@ class ViewController: UIViewController {
         
         // Pickers
         
-        myPickerView.backgroundColor = .gray
+        myPickerView.backgroundColor = .lightGray
         myPickerView.dataSource = self
         myPickerView.delegate = self
         myPickerView.isHidden = true //Con este codigo dejamos por defecto apagado el pickerView++
@@ -111,7 +111,7 @@ class ViewController: UIViewController {
     @IBAction func myButtonAction(_ sender: Any) {
         
         if myButton.backgroundColor == .blue {
-            myButton.backgroundColor = .green
+            myButton.backgroundColor = .systemYellow
         } else {
             myButton.backgroundColor = .blue
         }
