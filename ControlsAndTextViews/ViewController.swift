@@ -21,7 +21,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var myStepperLabel: UILabel!//Son etiquetas sobre el Stepper
     @IBOutlet weak var mySwitchLabel: UILabel!//
     @IBOutlet weak var myTextField: UITextField!//Añadimos una etiqueta de texto
-    @IBOutlet weak var myTextView: UITextView!//Diferencia entre el textField y el textView es que en el primero solo tenemos una linea de text y en el textView tenemos infinitas lineas
+    @IBOutlet weak var myTextView: UITextView!//Diferencia entre el textField y el textView es que en el primero solo tenemos una linea de text y en el textView tenemos infinitas lineas con Skroll
     
     // Variables
     
@@ -101,8 +101,9 @@ class ViewController: UIViewController {
         
         // TextViews
         
-        myTextView.textColor = .brown
-        myTextView.delegate = self
+        myTextView.textColor = .brown//Añadimos el color del text
+        myTextView.delegate = self//Y le añadimos un delegate para que el código sea editable implementando una extensión
+        //Si quisieramos que este codigo no sea editable y solo seleccionable tendriamos que añadir el código "myTextView.isEditable  = false"
     }
     
     // Actions
@@ -114,7 +115,7 @@ class ViewController: UIViewController {
         } else {
             myButton.backgroundColor = .blue
         }
-        
+        //De esta forma implementamos que cuando le damos al teclado se retire el teclado.
         myTextView.resignFirstResponder()
     }
     
@@ -231,11 +232,11 @@ extension ViewController: UITextFieldDelegate {
 
 // UITextViewDelegate
 extension ViewController: UITextViewDelegate {
-    
+    //Esta operación se va a llamar cuando nuestro text empiece a editarse.
     func textViewDidBeginEditing(_ textView: UITextView) {
         myTextField.isHidden = true
     }
-    
+    //Cuando finalice la edición llamaremos a nuestro TextField y decirle que ya no esta oculto
     func textViewDidEndEditing(_ textView: UITextView) {
         myTextField.isHidden = false
     }
